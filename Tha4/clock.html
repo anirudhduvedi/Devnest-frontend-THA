@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>clock using css</title>
+    <style>
+      
+          .clock {
+        border: 40px solid #f84342;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        box-shadow:3px 6px 6px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .minutes-container, .hours-container, .seconds-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .hours {
+        background: #000;
+        height: 20%;
+        left: 48.75%;
+        position: absolute;
+        top: 30%;
+        width: 2.5%;
+      }
+      .minutes {
+        background: #000;
+        height: 40%;
+        left: 49%;
+        position: absolute;
+        top: 10%;
+        width: 2%;
+      }
+      .seconds {
+        background: #000;
+        height: 48%;
+        left: 49.5%;
+        position: absolute;
+        top: 2%;
+        width: 1%;
+      }
+      @keyframes rotate {
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+      .hours-container {
+        animation: rotate 43200s infinite linear;
+      }
+      .minutes-container {
+        animation: rotate 3600s infinite linear;
+      }
+      .seconds-container {
+        animation: rotate 60s infinite linear;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <div class="clock">
+      <div class="hours-container">
+        <div class="hours"></div>
+      </div>
+      <div class="minutes-container">
+        <div class="minutes"></div>
+      </div>
+      <div class="seconds-container">
+        <div class="seconds"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
